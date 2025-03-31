@@ -20,6 +20,10 @@ public class TeamService : ITeamService
 
     public async Task<Team> CreateTeamAsync(Team team)
     {
+        if(await _teamRepository.TeamExistsAsync(team.Name))
+        {
+            throw new Exception($"Team with name {team.Name} already exists.");
+        }
         await _teamRepository.AddAync(team);
         await _teamRepository.SaveChangesAsync();
         return team;

@@ -18,4 +18,9 @@ public class TeamRepository : Repository<Team>, ITeamRepository
             .Include(t => t.Players)
             .FirstOrDefaultAsync(t => t.Id == teamId);
     }
+
+    public async Task<bool> TeamExistsAsync(string name)
+    {
+        return await _context.Teams.AnyAsync(t => t.Name == name);
+    }
 }
