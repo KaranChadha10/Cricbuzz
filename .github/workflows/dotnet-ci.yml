@@ -1,0 +1,36 @@
+name: .NET CI Pipeline
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Test
+        run: |
+          # Explicit path to test project (adjust if needed)
+          TEST_PROJECT="./CribBuzz.Tests/CribBuzz.Tests.csproj"
+          
+          echo "Running tests in $TEST_PROJECT"
+          dotnet test "$TEST_PROJECT" \
+            --configuration Release \
+            --no-build \
+            --logger "console;verbosity=normal" \
+            --collect:"XPlat Code Coverage"
