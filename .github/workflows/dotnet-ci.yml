@@ -1,25 +1,22 @@
-name: .NET Build & Test
+name: .NET CI Pipeline
 
 on:
   push:
-    branches: [ "main", "develop" ]  # Triggers on pushes to these branches
+    branches: [ "main", "develop" ]
   pull_request:
-    branches: [ "main", "develop" ]  # Triggers on PRs targeting these branches
+    branches: [ "main", "develop" ]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      # Checkout code
       - uses: actions/checkout@v4
 
-      # Setup .NET 8 SDK
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0.x'
 
-      # Restore, build, and test
       - name: Restore dependencies
         run: dotnet restore
 
@@ -27,9 +24,13 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test --no-build --verbosity normal
-
-      # Optional: Publish artifacts (for deployment)
-      - name: Publish
-        run: dotnet publish -c Release -o ./publish
-        if: github.ref == 'refs/heads/main'  # Only publish from 'main'
+        run: |
+          # Explicit path to test project (adjust if needed)
+          TEST_PROJECT="./CribBuzz.Tests/CribBuzz.Tests.csproj"
+          
+          echo "Running tests in $TEST_PROJECT"
+          dotnet test "$TEST_PROJECT" \
+            --configuration Release \
+            --no-build \
+            --logger "console;verbosity=normal" \
+            --collect:"XPlat Code Coverage"
