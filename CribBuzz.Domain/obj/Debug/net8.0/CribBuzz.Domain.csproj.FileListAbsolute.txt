@@ -1,0 +1,11 @@
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\bin\Debug\net8.0\CribBuzz.Domain.deps.json
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\bin\Debug\net8.0\CribBuzz.Domain.dll
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\bin\Debug\net8.0\CribBuzz.Domain.pdb
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\obj\Debug\net8.0\CribBuzz.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\obj\Debug\net8.0\CribBuzz.Domain.AssemblyInfoInputs.cache
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\obj\Debug\net8.0\CribBuzz.Domain.AssemblyInfo.cs
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\obj\Debug\net8.0\CribBuzz.Domain.csproj.CoreCompileInputs.cache
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\obj\Debug\net8.0\CribBuzz.Domain.dll
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\obj\Debug\net8.0\refint\CribBuzz.Domain.dll
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\obj\Debug\net8.0\CribBuzz.Domain.pdb
+C:\Users\karan\Cricbuzz\CribBuzz.Domain\obj\Debug\net8.0\ref\CribBuzz.Domain.dll

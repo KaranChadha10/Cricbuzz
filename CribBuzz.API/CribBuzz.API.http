@@ -1,0 +1,6 @@
+@CribBuzz.API_HostAddress = http://localhost:5239
+
+GET {{CribBuzz.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

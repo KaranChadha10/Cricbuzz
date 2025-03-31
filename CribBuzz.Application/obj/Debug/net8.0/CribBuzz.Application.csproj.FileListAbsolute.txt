@@ -1,0 +1,5 @@
+C:\Users\karan\Cricbuzz\CribBuzz.Application\obj\Debug\net8.0\CribBuzz.Application.csproj.AssemblyReference.cache
+C:\Users\karan\Cricbuzz\CribBuzz.Application\obj\Debug\net8.0\CribBuzz.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karan\Cricbuzz\CribBuzz.Application\obj\Debug\net8.0\CribBuzz.Application.AssemblyInfoInputs.cache
+C:\Users\karan\Cricbuzz\CribBuzz.Application\obj\Debug\net8.0\CribBuzz.Application.AssemblyInfo.cs
+C:\Users\karan\Cricbuzz\CribBuzz.Application\obj\Debug\net8.0\CribBuzz.Application.csproj.CoreCompileInputs.cache
