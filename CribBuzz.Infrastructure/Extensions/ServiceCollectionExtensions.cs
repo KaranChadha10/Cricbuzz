@@ -1,6 +1,6 @@
 using CribBuzz.Application.Services.Interfaces;
+using CribBuzz.Domain.Repositories.Interfaces;
 using CribBuzz.Infrastructure.Data;
-using CribBuzz.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

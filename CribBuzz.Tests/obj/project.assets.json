@@ -2641,7 +2641,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "CribBuzz.Domain": "1.0.0"
+          "CribBuzz.Domain": "1.0.0",
+          "CribBuzz.Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CribBuzz.Application.dll": {}
@@ -2665,7 +2666,6 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "CribBuzz.Application": "1.0.0",
           "CribBuzz.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3"

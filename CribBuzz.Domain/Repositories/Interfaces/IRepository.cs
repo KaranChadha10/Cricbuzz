@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace CribBuzz.Infrastructure.Repositories.Interfaces;
+namespace CribBuzz.Domain.Repositories.Interfaces;
 public interface IRepository<T> where T : class
 {
     Task<IEnumerable<T>> GetAllAsync();

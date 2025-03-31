@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using CribBuzz.Infrastructure.Data;
-using CribBuzz.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using CribBuzz.Domain.Repositories.Interfaces;
 
 public class Repository<T> : IRepository<T> where T : class
 {

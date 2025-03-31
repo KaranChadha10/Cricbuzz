@@ -28,6 +28,9 @@
             "projectReferences": {
               "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Domain\\CribBuzz.Domain.csproj": {
                 "projectPath": "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Domain\\CribBuzz.Domain.csproj"
+              },
+              "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Infrastructure\\CribBuzz.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Infrastructure\\CribBuzz.Infrastructure.csproj"
               }
             }
           }
@@ -146,9 +149,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Application\\CribBuzz.Application.csproj": {
-                "projectPath": "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Application\\CribBuzz.Application.csproj"
-              },
               "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Domain\\CribBuzz.Domain.csproj": {
                 "projectPath": "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Domain\\CribBuzz.Domain.csproj"
               }

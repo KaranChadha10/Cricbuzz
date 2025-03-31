@@ -1,5 +1,5 @@
 using CribBuzz.Domain.Entities;
-using CribBuzz.Infrastructure.Repositories.Interfaces;
+using CribBuzz.Domain.Repositories.Interfaces;
 
 public interface ITeamRepository : IRepository<Team>
 {

@@ -1632,19 +1632,6 @@
           }
         }
       },
-      "CribBuzz.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "CribBuzz.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/CribBuzz.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CribBuzz.Application.dll": {}
-        }
-      },
       "CribBuzz.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -4776,11 +4763,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "CribBuzz.Application/1.0.0": {
-      "type": "project",
-      "path": "../CribBuzz.Application/CribBuzz.Application.csproj",
-      "msbuildProject": "../CribBuzz.Application/CribBuzz.Application.csproj"
-    },
     "CribBuzz.Domain/1.0.0": {
       "type": "project",
       "path": "../CribBuzz.Domain/CribBuzz.Domain.csproj",
@@ -4790,7 +4772,6 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
-      "CribBuzz.Application >= 1.0.0",
       "CribBuzz.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.3",
@@ -4822,9 +4803,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Application\\CribBuzz.Application.csproj": {
-              "projectPath": "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Application\\CribBuzz.Application.csproj"
-            },
             "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Domain\\CribBuzz.Domain.csproj": {
               "projectPath": "C:\\Users\\karan\\Cricbuzz\\CribBuzz.Domain\\CribBuzz.Domain.csproj"
             }
