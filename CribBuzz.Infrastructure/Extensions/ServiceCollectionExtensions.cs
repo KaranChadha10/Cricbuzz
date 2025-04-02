@@ -1,6 +1,8 @@
 using CribBuzz.Application.Services.Interfaces;
+using CribBuzz.Domain.Interfaces;
 using CribBuzz.Domain.Repositories.Interfaces;
 using CribBuzz.Infrastructure.Data;
+using CribBuzz.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +20,7 @@ public static class ServiceCollectionExtensions
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<ITeamRepository, TeamRepository>();
             services.AddScoped<ITeamService, TeamService>(); // Register Service
+            services.AddTransient(typeof(IPaginator<>), typeof(Paginator<>));
 
 
         return services;

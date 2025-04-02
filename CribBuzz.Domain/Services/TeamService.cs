@@ -1,17 +1,29 @@
 using CribBuzz.Domain.Entities;
+using CribBuzz.Common.Models.Responses;
+using CribBuzz.Domain.Interfaces;
+
 namespace CribBuzz.Application.Services.Interfaces;
 public class TeamService : ITeamService
 {
     private readonly ITeamRepository _teamRepository;
-    public TeamService(ITeamRepository teamRepository)
+    private readonly IPaginator<Team> _paginator;
+
+    public TeamService(ITeamRepository teamRepository,  IPaginator<Team> paginator)
     {
         _teamRepository = teamRepository;
+        _paginator = paginator;
     }
 
-    public async Task<IEnumerable<Team>> GetAllTeamsAsync()
-    {
-        return await _teamRepository.GetAllAsync();
-    }
+    public async Task<PaginatedResponse<Team>> GetAllTeamsAsync(
+            PaginationParam paginationParams, CancellationToken cancellationToken = default)
+        {
+            var query = _teamRepository.GetAllTeamsWithPlayers();
+            return await _paginator.PaginateAsync(
+                query,
+                paginationParams.pageNumber,
+                paginationParams.pageSize,
+                cancellationToken);
+        }
 
     public async Task<Team> GetTeamByIdAsync(int teamId)
     {
@@ -44,5 +56,4 @@ public class TeamService : ITeamService
             await _teamRepository.SaveChangesAsync();
         }
     }
-
 }
