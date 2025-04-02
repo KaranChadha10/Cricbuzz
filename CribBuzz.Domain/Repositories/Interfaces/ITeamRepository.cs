@@ -5,5 +5,8 @@ public interface ITeamRepository : IRepository<Team>
 {
     Task<Team?> GetTeamWithPlayersAsync(int teamId);
     Task<bool> TeamExistsAsync(string name);
+
+    // New method for pagination
+    IQueryable<Team> GetAllTeamsWithPlayers(); 
     
 }

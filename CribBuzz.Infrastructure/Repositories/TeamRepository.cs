@@ -23,4 +23,10 @@ public class TeamRepository : Repository<Team>, ITeamRepository
     {
         return await _context.Teams.AnyAsync(t => t.Name == name);
     }
+
+    // New method for pagination
+    public IQueryable<Team> GetAllTeamsWithPlayers()
+    {
+        return _context.Teams.Include(t => t.Players);
+    }
 }

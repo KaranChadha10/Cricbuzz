@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CribBuzz.Domain\CribBuzz.Domain.csproj" />
+    <ProjectReference Include="..\CribBuzz.Common\CribBuzz.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
